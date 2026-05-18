@@ -220,6 +220,7 @@ export async function POST(req: Request) {
       destinationMood,
       aspiration: aspirationTone,
     });
+    console.log('[api/generate] Final image prompt:', finalPrompt);
 
     // Run both AI tasks concurrently to reduce response latency
     const [personaCopy, generatedImageUrl] = await Promise.all([

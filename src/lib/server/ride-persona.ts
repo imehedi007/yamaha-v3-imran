@@ -30,23 +30,56 @@ interface CandidateBike extends QueryRow {
 }
 
 const FIXED_IDENTITY_BLOCK = [
-  'Create a premium, ultra-realistic lifestyle portrait of the exact same person shown in the reference image.',
-  'Preserve the exact face, hairstyle, facial hair, age, and identity with a strong 1:1 resemblance.',
-  'Use realistic anatomy, seamless skin tones, and natural integration between the reference face and the generated body.',
+  'Create a premium ultra-photorealistic lifestyle portrait of the exact person from the reference image.',
+  'Preserve exact facial identity, hairstyle, facial hair, age, and natural likeness.',
 ].join(' ');
 
 const FIXED_COMPOSITION_BLOCK = [
-  'Use a vertical 3:4 campaign composition.',
-  'Show the rider from head to toe with the full motorcycle visible.',
-  'The rider should stand beside or lightly lean on the motorcycle with confident body language.',
-  'Keep the face unobstructed and do not place a helmet on the head.',
+  'Vertical 3:4 composition.',
+  'Full body visible.',
+  'Full motorcycle visible.',
+  'Face unobstructed.',
+  'Helmet not worn.',
 ].join(' ');
 
 const FIXED_REALISM_BLOCK = [
-  'Use ultra photorealistic commercial motorcycle photography.',
-  'Preserve realistic Yamaha proportions, real materials, authentic lighting, shadows, and reflections.',
-  'No cartoon styling, no illustration look, no distorted limbs, and no duplicate body parts.',
+  'Style: commercial motorcycle photography, cinematic depth of field, natural lighting, realistic shadows, high-detail textures, realistic skin tones, and seamless face integration.',
 ].join(' ');
+
+const POSE_OPTIONS = [
+  'Full-body standing beside the motorcycle, arms crossed, body angled toward the bike, head slightly turned away, confident presence.',
+  'Sitting sideways on the motorcycle seat, one foot on the ground, upper body turned slightly toward camera, one hand resting on or holding the helmet.',
+  'Standing beside the motorcycle, one hand adjusting the collar area, the other holding a helmet, calm cinematic confidence.',
+  'Sitting on the motorcycle, torso slightly forward, both forearms resting on a helmet near the tank or handlebar, relaxed editorial pose.',
+  'Walking beside the parked motorcycle, carrying a helmet in one hand, natural mid-step movement, cinematic travel mood.',
+] as const;
+
+const NEGATIVE_PROMPT_TERMS = [
+  'torn clothing',
+  'damaged trousers',
+  'worn-out shoes',
+  'dirty outfit',
+  'messy wardrobe',
+  'broken accessories',
+  'deformed motorcycle',
+  'warped motorcycle frame',
+  'rusty motorcycle parts',
+  'low-quality motorcycle detailing',
+  'blurry details',
+  'distorted anatomy',
+  'extra limbs',
+  'awkward hands',
+  'unnatural posture',
+  'duplicated body parts',
+  'oversaturated colors',
+  'poorly rendered helmet',
+  'floating objects',
+  'cluttered background',
+  'cartoon appearance',
+  'illustration look',
+  'CGI-looking skin',
+  'bike number plate'
+] as const;
 
 function parseJsonRecord<T>(value: unknown, fallback: T): T {
   if (!value) return fallback;
@@ -110,6 +143,19 @@ function resolveColorMatch(availableColors: string[], aspirationColor: string) {
     matchedColor: availableColors[0],
     hasMatch: false,
   };
+}
+
+function selectRandomPose() {
+  const poseIndex = Math.floor(Math.random() * POSE_OPTIONS.length);
+  return POSE_OPTIONS[poseIndex];
+}
+
+function buildNegativePromptBlock() {
+  return `Negative prompt: ${NEGATIVE_PROMPT_TERMS.join(', ')}.`;
+}
+
+function buildFinalMood(destinationMood: string, aspiration: string) {
+  return `${destinationMood} ${aspiration}`.replace(/\s+/g, ' ').trim();
 }
 
 export function parsePersonaPayload(persona: string): PersonaPayload {
@@ -268,15 +314,22 @@ export function buildImagePrompt(args: {
   const destinationScene = args.destinationScene || 'a premium scenic road';
   const destinationMood = args.destinationMood || 'confident, premium, and cinematic';
   const aspiration = args.aspiration || 'signature rider energy';
+  const selectedPose = selectRandomPose();
+  const negativePromptBlock = buildNegativePromptBlock();
+  const finalMood = buildFinalMood(destinationMood, aspiration);
 
   return [
     FIXED_IDENTITY_BLOCK,
     FIXED_COMPOSITION_BLOCK,
+    'Randomly select exactly one approved pose and use only that pose.',
+    'Do not mix poses or body positions.',
+    'Maintain realistic anatomy, balanced posture, natural body mechanics, clean hands, and correct limb proportions.',
+    `Pose: ${selectedPose}`,
+    `Vehicle: realistic ${args.bikeModel} in ${args.bikeColor}, with authentic model presence, accurate proportions, clean frame geometry, realistic materials, proper reflections, detailed mechanical parts, and high-quality motorcycle styling.`,
     `Environment: ${destinationScene}.`,
-    `Mood: ${destinationMood}.`,
-    `Aspirational tone: ${aspiration}.`,
-    `Vehicle: a realistic Yamaha ${args.bikeModel} in ${args.bikeColor}.`,
-    'Wardrobe: premium biker streetwear with a polished Yamaha lifestyle aesthetic.',
+    `Mood: ${finalMood}.`,
+    'Wardrobe: premium Yamaha-inspired biker streetwear, polished, clean, and well-fitted.',
     FIXED_REALISM_BLOCK,
+    negativePromptBlock,
   ].join(' ');
 }

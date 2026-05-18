@@ -2,122 +2,204 @@
 > yamaha-test@0.1.0 dev
 > next dev
 
-▲ Next.js 16.2.4 (Turbopack)
+▲ Next.js 16.2.6 (Turbopack)
 - Local:         http://localhost:3000
 - Network:       http://192.168.0.102:3000
 - Environments: .env.local
-✓ Ready in 287ms
+✓ Ready in 278ms
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/esmailkhalifa/My File/git 2/package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * /Users/esmailkhalifa/My File/git 2/yamaha-v3-imran/package-lock.json
 
- GET /result/d050d206e4934567be354ff9263c556b 200 in 891ms (next.js: 629ms, application-code: 262ms)
- GET /admin/generations 200 in 249ms (next.js: 102ms, application-code: 146ms)
- GET /api/admin/auth/me 401 in 194ms (next.js: 150ms, application-code: 43ms)
- GET /admin/login 200 in 281ms (next.js: 39ms, application-code: 242ms)
- POST /api/admin/auth/login 200 in 107ms (next.js: 61ms, application-code: 46ms)
- GET /admin 200 in 42ms (next.js: 20ms, application-code: 22ms)
- GET /api/admin/auth/me 200 in 101ms (next.js: 7ms, application-code: 93ms)
- GET /api/admin/quiz/questions 200 in 600ms (next.js: 405ms, application-code: 195ms)
- GET /api/admin/bikes 200 in 607ms (next.js: 149ms, application-code: 458ms)
- GET /api/admin/users?limit=1 200 in 615ms (next.js: 197ms, application-code: 418ms)
- GET /api/admin/generations?limit=1 200 in 629ms (next.js: 260ms, application-code: 369ms)
- GET /api/admin/quiz/questions 200 in 16ms (next.js: 1670µs, application-code: 15ms)
- GET /api/admin/bikes 200 in 22ms (next.js: 3ms, application-code: 19ms)
- GET /api/admin/users?limit=1 200 in 29ms (next.js: 7ms, application-code: 22ms)
- GET /api/admin/generations?limit=1 200 in 16ms (next.js: 6ms, application-code: 10ms)
- GET /admin/generations 200 in 38ms (next.js: 6ms, application-code: 32ms)
- GET /api/admin/auth/me 200 in 33ms (next.js: 7ms, application-code: 26ms)
- GET /api/admin/generations?page=1&limit=20 200 in 55ms (next.js: 31ms, application-code: 24ms)
- GET /api/admin/generations?page=1&limit=20 200 in 14ms (next.js: 1332µs, application-code: 13ms)
- GET / 200 in 687ms (next.js: 101ms, application-code: 586ms)
- POST /api/auth/otp/send 200 in 219ms (next.js: 97ms, application-code: 122ms)
- GET /quiz 200 in 109ms (next.js: 67ms, application-code: 42ms)
- GET /api/quiz/questions 200 in 192ms (next.js: 127ms, application-code: 65ms)
- GET /api/quiz/questions 200 in 28ms (next.js: 9ms, application-code: 20ms)
- POST /api/quiz/submit 200 in 77ms (next.js: 59ms, application-code: 18ms)
- GET /upload 200 in 74ms (next.js: 29ms, application-code: 45ms)
- GET /api/generate?requestId=e3452bb6f1b54f578b10754d242c1f21 200 in 435ms (next.js: 361ms, application-code: 74ms)
-[api/generate] form-data-parsed at 16ms
-[api/generate] auth-verified at 73ms
-[api/generate] rate-limit-checked at 125ms
-[api/generate] photo-encoded at 127ms
-[api/generate] persona-parsed at 129ms
-[api/generate] bike-selected at 194ms
-[api/generate] generation-reserved at 516ms
+
+ GET /upload 200 in 329ms (next.js: 134ms, application-code: 195ms)
+ GET /upload 200 in 68ms (next.js: 8ms, application-code: 60ms)
+ GET / 200 in 480ms (next.js: 207ms, application-code: 273ms)
+ POST /api/auth/otp/send 200 in 244ms (next.js: 144ms, application-code: 100ms)
+ GET /quiz 200 in 50ms (next.js: 29ms, application-code: 21ms)
+ GET /api/quiz/questions 200 in 79ms (next.js: 54ms, application-code: 26ms)
+ GET /api/quiz/questions 200 in 18ms (next.js: 4ms, application-code: 14ms)
+ POST /api/quiz/submit 200 in 118ms (next.js: 106ms, application-code: 12ms)
+ GET /upload 200 in 33ms (next.js: 3ms, application-code: 30ms)
+ GET /api/generate?requestId=dd867cf76e4546bd8207b7a2c62d189d 200 in 93ms (next.js: 87ms, application-code: 6ms)
+[api/generate] form-data-parsed at 4ms
+[api/generate] auth-verified at 50ms
+[api/generate] rate-limit-checked at 68ms
+[api/generate] photo-encoded at 69ms
+[api/generate] persona-parsed at 69ms
+[api/generate] bike-selected at 73ms
+[api/generate] generation-reserved at 77ms
 [api/generate] Generating persona copy and image in parallel...
+[api/generate] Final image prompt: Create a premium ultra-photorealistic lifestyle portrait of the exact person from the reference image. Preserve exact facial identity, hairstyle, facial hair, age, and natural likeness. Vertical 3:4 composition. Full body visible. Full motorcycle visible. Face unobstructed. Helmet not worn. Randomly select exactly one approved pose and use only that pose. Do not mix poses or body positions. Maintain realistic anatomy, balanced posture, natural body mechanics, clean hands, and correct limb proportions. Pose: Standing beside the motorcycle, one hand adjusting the collar area, the other holding a helmet, calm cinematic confidence. Vehicle: realistic Yamaha Saluto in Pastel Dark Grey, with authentic model presence, accurate proportions, clean frame geometry, realistic materials, proper reflections, detailed mechanical parts, and high-quality motorcycle styling. Environment: A serene coastal marine drive road beside a tropical Maldives-style beach. Crystal-clear blue ocean, white sand, palm trees, and luxury beach villas in the background. Soft sunlight with a calm sea breeze mood. Open scenic road, realistic premium travel photography, cinematic composition, peaceful and aspirational atmosphere.. Mood: The Serene Traveler: Motivated by freedom, calmness, and the relaxation of scenic coastal experiences. Balance and intellect. Wardrobe: premium Yamaha-inspired biker streetwear, polished, clean, and well-fitted. Style: commercial motorcycle photography, cinematic depth of field, natural lighting, realistic shadows, high-detail textures, realistic skin tones, and seamless face integration. Negative prompt: torn clothing, damaged trousers, worn-out shoes, dirty outfit, messy wardrobe, broken accessories, deformed motorcycle, warped motorcycle frame, rusty motorcycle parts, low-quality motorcycle detailing, blurry details, distorted anatomy, extra limbs, awkward hands, unnatural posture, duplicated body parts, oversaturated colors, poorly rendered helmet, floating objects, cluttered background, cartoon appearance, illustration look, CGI-looking skin, bike number plate.
 [generateCinematicImage] starting request {
   model: 'gemini-3.1-flash-image-preview',
   mimeType: 'image/jpeg',
-  promptLength: 1423,
+  promptLength: 2096,
   referenceImageCopies: 3,
   referenceImageReason: 'intentional face-match boost',
-  base64Chars: 34648,
-  approxInputBytes: 25986
+  base64Chars: 256268,
+  approxInputBytes: 192201
 }
 [generateCinematicImage] completed {
   attempt: 1,
-  attemptMs: 18667,
-  totalMs: 18671,
+  attemptMs: 17453,
+  totalMs: 17455,
   outputMimeType: 'image/jpeg',
-  outputBase64Chars: 935480
+  outputBase64Chars: 1025808
 }
-[api/generate] ai-complete at 19208ms
+[api/generate] ai-complete at 17537ms
 [api/generate] Uploading to S3...
-[api/generate] s3-uploaded at 20788ms
+[api/generate] s3-uploaded at 18473ms
 [api/generate] Saving to database...
-[api/generate] db-saved at 20864ms
-[api/generate] cookie-cleared at 20865ms
+[api/generate] db-saved at 18483ms
+[api/generate] cookie-cleared at 18484ms
 [api/generate] completed {
-  totalMs: 20865,
+  totalMs: 18485,
   checkpoints: {
-    'form-data-parsed': 16,
-    'auth-verified': 73,
-    'rate-limit-checked': 125,
-    'photo-encoded': 127,
-    'persona-parsed': 129,
-    'bike-selected': 194,
-    'generation-reserved': 516,
-    'ai-complete': 19208,
-    's3-uploaded': 20788,
-    'db-saved': 20864,
-    'cookie-cleared': 20865
+    'form-data-parsed': 4,
+    'auth-verified': 50,
+    'rate-limit-checked': 68,
+    'photo-encoded': 69,
+    'persona-parsed': 69,
+    'bike-selected': 73,
+    'generation-reserved': 77,
+    'ai-complete': 17537,
+    's3-uploaded': 18473,
+    'db-saved': 18483,
+    'cookie-cleared': 18484
   },
-  uploadedPhotoBytes: 25986,
-  encodedPhotoBase64Chars: 34648,
-  generatedImageBase64Chars: 935503
+  uploadedPhotoBytes: 192199,
+  encodedPhotoBase64Chars: 256268,
+  generatedImageBase64Chars: 1025831
 }
- POST /api/generate 200 in 20.9s (next.js: 4ms, application-code: 20.9s)
- GET /result/e3452bb6f1b54f578b10754d242c1f21 200 in 92ms (next.js: 16ms, application-code: 76ms)
-
-<--- Last few GCs --->
-
-[36491:0x8ad40c000]   381208 ms: Scavenge 3829.1 (4100.1) -> 3817.5 (4172.1) MB, pooled: 0 MB, 32.25 / 0.00 ms  (average mu = 0.265, current mu = 0.242) allocation failure; 
-[36491:0x8ad40c000]   390248 ms: Mark-Compact (reduce) 3868.3 (4180.1) -> 3770.9 (4026.6) MB, pooled: 0 MB, 8523.79 / 266.58 ms  (+ 171.8 ms in 35 steps since start of marking, biggest step 6.1 ms, walltime since start of marking 8894 ms) (average mu = 0.
-FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory
------ Native stack trace -----
-
- 1: 0x100e6083c node::OOMErrorHandler(char const*, v8::OOMDetails const&) [/usr/local/bin/node]
- 2: 0x101060620 v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, v8::OOMDetails const&) [/usr/local/bin/node]
- 3: 0x1012bfa1c v8::internal::Heap::stack() [/usr/local/bin/node]
- 4: 0x1012c2df0 v8::internal::Heap::HasLowYoungGenerationAllocationRate() [/usr/local/bin/node]
- 5: 0x1012d3fe4 v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags)::$_1::operator()() const [/usr/local/bin/node]
- 6: 0x1012d38b8 void heap::base::Stack::SetMarkerAndCallbackImpl<v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags)::$_1>(heap::base::Stack*, void*, void const*) [/usr/local/bin/node]
- 7: 0x101c89f10 PushAllRegistersAndIterateStack [/usr/local/bin/node]
- 8: 0x1012bd720 v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/usr/local/bin/node]
- 9: 0x1012350b8 v8::internal::StackGuard::HandleInterrupts(v8::internal::StackGuard::InterruptLevel) [/usr/local/bin/node]
-10: 0x101723564 v8::internal::Runtime_StackGuardWithGap(int, unsigned long*, v8::internal::Isolate*) [/usr/local/bin/node]
-11: 0x101d7a234 Builtins_CEntry_Return1_ArgvOnStack_NoBuiltinExit [/usr/local/bin/node]
-12: 0x129044d44 
-13: 0x101cda8cc Builtins_JSEntryTrampoline [/usr/local/bin/node]
-14: 0x101cda570 Builtins_JSEntry [/usr/local/bin/node]
-15: 0x101203be0 v8::internal::(anonymous namespace)::Invoke(v8::internal::Isolate*, v8::internal::(anonymous namespace)::InvokeParams const&) [/usr/local/bin/node]
-16: 0x101203544 v8::internal::Execution::Call(v8::internal::Isolate*, v8::internal::DirectHandle<v8::internal::Object>, v8::internal::DirectHandle<v8::internal::Object>, v8::base::Vector<v8::internal::DirectHandle<v8::internal::Object> const>) [/usr/local/bin/node]
-17: 0x101077fe0 v8::Function::Call(v8::Isolate*, v8::Local<v8::Context>, v8::Local<v8::Value>, int, v8::Local<v8::Value>*) [/usr/local/bin/node]
-18: 0x100e04ec4 napi_call_function [/usr/local/bin/node]
-19: 0x145e5c538 napi_register_module_v1 [/Users/esmailkhalifa/Documents/GitHub/yamaha-v2-imran/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node]
-20: 0x100e21b4c v8impl::(anonymous namespace)::ThreadSafeFunction::AsyncCb(uv_async_s*) [/usr/local/bin/node]
-21: 0x101cb93e0 uv__async_io [/usr/local/bin/node]
-22: 0x101ccd778 uv__io_poll [/usr/local/bin/node]
-23: 0x101cb9948 uv_run [/usr/local/bin/node]
-24: 0x100d61b44 node::SpinEventLoopInternal(node::Environment*) [/usr/local/bin/node]
-25: 0x100eb48c8 node::NodeMainInstance::Run() [/usr/local/bin/node]
-26: 0x100e1a468 node::Start(int, char**) [/usr/local/bin/node]
-27: 0x18eecbda4 start [/usr/lib/dyld]
+ POST /api/generate 200 in 18.5s (next.js: 1433µs, application-code: 18.5s)
+ GET /result/dd867cf76e4546bd8207b7a2c62d189d 200 in 543ms (next.js: 477ms, application-code: 66ms)
+ GET / 200 in 56ms (next.js: 12ms, application-code: 44ms)
+ POST /api/auth/otp/send 200 in 36ms (next.js: 9ms, application-code: 27ms)
+ GET /quiz 200 in 21ms (next.js: 5ms, application-code: 16ms)
+ GET /api/quiz/questions 200 in 42ms (next.js: 8ms, application-code: 34ms)
+ GET /api/quiz/questions 200 in 17ms (next.js: 1374µs, application-code: 16ms)
+ POST /api/quiz/submit 200 in 30ms (next.js: 9ms, application-code: 22ms)
+ GET /upload 200 in 26ms (next.js: 3ms, application-code: 22ms)
+ GET /api/generate?requestId=978477a5a379473dabec99f12519a64c 200 in 54ms (next.js: 37ms, application-code: 17ms)
+[api/generate] form-data-parsed at 3ms
+[api/generate] auth-verified at 8ms
+[api/generate] rate-limit-checked at 32ms
+[api/generate] photo-encoded at 34ms
+[api/generate] persona-parsed at 34ms
+[api/generate] bike-selected at 39ms
+[api/generate] generation-reserved at 57ms
+[api/generate] Generating persona copy and image in parallel...
+[api/generate] Final image prompt: Create a premium ultra-photorealistic lifestyle portrait of the exact person from the reference image. Preserve exact facial identity, hairstyle, facial hair, age, and natural likeness. Vertical 3:4 composition. Full body visible. Full motorcycle visible. Face unobstructed. Helmet not worn. Randomly select exactly one approved pose and use only that pose. Do not mix poses or body positions. Maintain realistic anatomy, balanced posture, natural body mechanics, clean hands, and correct limb proportions. Pose: Standing beside the motorcycle, one hand adjusting the collar area, the other holding a helmet, calm cinematic confidence. Vehicle: realistic Yamaha FZ-25 in Black, with authentic model presence, accurate proportions, clean frame geometry, realistic materials, proper reflections, detailed mechanical parts, and high-quality motorcycle styling. Environment: A cinematic winding hill road through lush green mountains, layered hills in the background, soft morning mist, pine trees, golden-hour sunlight, clear open road, fresh mountain atmosphere, realistic scenic travel photography, premium cinematic depth, peaceful adventurous riding mood.. Mood: The Nature Enthusiast: Values peace, elevation, and the refreshing spirit of scenic mountain adventures. Mastery and depth. Wardrobe: premium Yamaha-inspired biker streetwear, polished, clean, and well-fitted. Style: commercial motorcycle photography, cinematic depth of field, natural lighting, realistic shadows, high-detail textures, realistic skin tones, and seamless face integration. Negative prompt: torn clothing, damaged trousers, worn-out shoes, dirty outfit, messy wardrobe, broken accessories, deformed motorcycle, warped motorcycle frame, rusty motorcycle parts, low-quality motorcycle detailing, blurry details, distorted anatomy, extra limbs, awkward hands, unnatural posture, duplicated body parts, oversaturated colors, poorly rendered helmet, floating objects, cluttered background, cartoon appearance, illustration look, CGI-looking skin, bike number plate.
+[generateCinematicImage] starting request {
+  model: 'gemini-3.1-flash-image-preview',
+  mimeType: 'image/jpeg',
+  promptLength: 2040,
+  referenceImageCopies: 3,
+  referenceImageReason: 'intentional face-match boost',
+  base64Chars: 191188,
+  approxInputBytes: 143391
+}
+[generateCinematicImage] completed {
+  attempt: 1,
+  attemptMs: 21005,
+  totalMs: 21006,
+  outputMimeType: 'image/jpeg',
+  outputBase64Chars: 1039752
+}
+[api/generate] ai-complete at 21068ms
+[api/generate] Uploading to S3...
+[api/generate] s3-uploaded at 21772ms
+[api/generate] Saving to database...
+[api/generate] db-saved at 21782ms
+[api/generate] cookie-cleared at 21783ms
+[api/generate] completed {
+  totalMs: 21783,
+  checkpoints: {
+    'form-data-parsed': 3,
+    'auth-verified': 8,
+    'rate-limit-checked': 32,
+    'photo-encoded': 34,
+    'persona-parsed': 34,
+    'bike-selected': 39,
+    'generation-reserved': 57,
+    'ai-complete': 21068,
+    's3-uploaded': 21772,
+    'db-saved': 21782,
+    'cookie-cleared': 21783
+  },
+  uploadedPhotoBytes: 143390,
+  encodedPhotoBase64Chars: 191188,
+  generatedImageBase64Chars: 1039775
+}
+ POST /api/generate 200 in 21.8s (next.js: 9ms, application-code: 21.8s)
+ GET /result/978477a5a379473dabec99f12519a64c 200 in 46ms (next.js: 11ms, application-code: 35ms)
+ GET /result/f8c118a847ef47c58bed8cc4a6071f57 200 in 78ms (next.js: 18ms, application-code: 60ms)
+ GET /admin/settings 200 in 241ms (next.js: 140ms, application-code: 101ms)
+ GET /admin/settings 200 in 29ms (next.js: 2ms, application-code: 27ms)
+ GET /api/admin/auth/me 401 in 120ms (next.js: 113ms, application-code: 7ms)
+ GET /admin/login 200 in 67ms (next.js: 40ms, application-code: 27ms)
+ POST /api/admin/auth/login 200 in 75ms (next.js: 56ms, application-code: 19ms)
+ GET /admin 200 in 56ms (next.js: 37ms, application-code: 19ms)
+ GET /api/admin/auth/me 200 in 132ms (next.js: 1989µs, application-code: 130ms)
+ GET /api/admin/quiz/questions 200 in 224ms (next.js: 180ms, application-code: 44ms)
+ GET /api/admin/bikes 200 in 229ms (next.js: 80ms, application-code: 149ms)
+ GET /api/admin/users?limit=1 200 in 241ms (next.js: 126ms, application-code: 115ms)
+ GET /api/admin/generations?limit=1 200 in 236ms (next.js: 39ms, application-code: 197ms)
+ GET /api/admin/bikes 200 in 20ms (next.js: 7ms, application-code: 13ms)
+ GET /api/admin/quiz/questions 200 in 23ms (next.js: 5ms, application-code: 18ms)
+ GET /api/admin/users?limit=1 200 in 25ms (next.js: 8ms, application-code: 17ms)
+ GET /api/admin/generations?limit=1 200 in 27ms (next.js: 11ms, application-code: 16ms)
+ GET /admin/generations 200 in 67ms (next.js: 44ms, application-code: 23ms)
+ GET /api/admin/auth/me 200 in 16ms (next.js: 11ms, application-code: 4ms)
+ GET /api/admin/generations?page=1&limit=20 200 in 28ms (next.js: 4ms, application-code: 24ms)
+ GET /api/admin/generations?page=1&limit=20 200 in 12ms (next.js: 1092µs, application-code: 11ms)
+ GET /result/dd867cf76e4546bd8207b7a2c62d189d 200 in 80ms (next.js: 14ms, application-code: 66ms)
+ GET /admin/users 200 in 1187ms (next.js: 1143ms, application-code: 44ms)
+ GET /api/admin/auth/me 200 in 21ms (next.js: 11ms, application-code: 9ms)
+ GET /api/admin/users?page=1&limit=20 200 in 37ms (next.js: 5ms, application-code: 32ms)
+ GET /api/admin/users?page=1&limit=20 200 in 28ms (next.js: 2ms, application-code: 25ms)
+ GET /admin/bikes 200 in 286ms (next.js: 269ms, application-code: 16ms)
+ GET /api/admin/auth/me 200 in 16ms (next.js: 11ms, application-code: 5ms)
+ GET /api/admin/bikes 200 in 32ms (next.js: 16ms, application-code: 17ms)
+ GET /api/admin/bikes 200 in 7ms (next.js: 1580µs, application-code: 5ms)
+ GET /admin/quiz 200 in 236ms (next.js: 222ms, application-code: 14ms)
+ GET /api/admin/auth/me 200 in 23ms (next.js: 10ms, application-code: 13ms)
+ GET /api/admin/bikes 200 in 27ms (next.js: 7ms, application-code: 20ms)
+ GET /api/admin/quiz/questions 200 in 29ms (next.js: 9ms, application-code: 20ms)
+ GET /api/admin/bikes 200 in 15ms (next.js: 1160µs, application-code: 14ms)
+ GET /api/admin/quiz/questions 200 in 20ms (next.js: 7ms, application-code: 13ms)
+ GET /api/admin/quiz/options?questionId=1 200 in 262ms (next.js: 229ms, application-code: 33ms)
+ PUT /api/admin/quiz/options 200 in 62ms (next.js: 8ms, application-code: 54ms)
+ GET /api/admin/quiz/options?questionId=1 200 in 8ms (next.js: 1894µs, application-code: 7ms)
+ PUT /api/admin/quiz/options 200 in 27ms (next.js: 7ms, application-code: 21ms)
+ GET /api/admin/quiz/options?questionId=1 200 in 11ms (next.js: 1906µs, application-code: 9ms)
+ PUT /api/admin/quiz/options 200 in 20ms (next.js: 5ms, application-code: 15ms)
+ GET /api/admin/quiz/options?questionId=1 200 in 11ms (next.js: 1947µs, application-code: 9ms)
+ PUT /api/admin/quiz/options 200 in 20ms (next.js: 4ms, application-code: 16ms)
+ GET /api/admin/quiz/options?questionId=1 200 in 10ms (next.js: 1910µs, application-code: 9ms)
+ GET /admin/bikes 200 in 28ms (next.js: 6ms, application-code: 22ms)
+ GET /api/admin/bikes 200 in 13ms (next.js: 3ms, application-code: 9ms)
+ GET /api/admin/auth/me 200 in 6ms (next.js: 1136µs, application-code: 4ms)
+ GET /api/admin/bikes 200 in 5ms (next.js: 743µs, application-code: 4ms)
+ DELETE /api/admin/bikes?id=48 200 in 18ms (next.js: 5ms, application-code: 13ms)
+ GET /api/admin/bikes 200 in 7ms (next.js: 1719µs, application-code: 6ms)
+ GET /admin/quiz 200 in 52ms (next.js: 17ms, application-code: 36ms)
+ GET /api/admin/bikes 200 in 31ms (next.js: 19ms, application-code: 12ms)
+ GET /api/admin/auth/me 200 in 6ms (next.js: 1610µs, application-code: 4ms)
+ GET /api/admin/quiz/questions 200 in 18ms (next.js: 9ms, application-code: 9ms)
+ GET /api/admin/bikes 200 in 8ms (next.js: 1521µs, application-code: 6ms)
+ GET /api/admin/quiz/questions 200 in 5ms (next.js: 606µs, application-code: 5ms)
+ GET /admin 200 in 26ms (next.js: 6ms, application-code: 20ms)
+ GET /api/admin/auth/me 200 in 21ms (next.js: 19ms, application-code: 2ms)
+ GET /api/admin/users?limit=1 200 in 39ms (next.js: 19ms, application-code: 20ms)
+ GET /api/admin/quiz/questions 200 in 28ms (next.js: 19ms, application-code: 9ms)
+ GET /api/admin/bikes 200 in 30ms (next.js: 13ms, application-code: 17ms)
+ GET /api/admin/generations?limit=1 200 in 33ms (next.js: 12ms, application-code: 21ms)
+ GET /api/admin/bikes 200 in 14ms (next.js: 10ms, application-code: 5ms)
+ GET /api/admin/quiz/questions 200 in 25ms (next.js: 8ms, application-code: 17ms)
+ GET /api/admin/users?limit=1 200 in 28ms (next.js: 1477µs, application-code: 27ms)
+ GET /api/admin/generations?limit=1 200 in 19ms (next.js: 10ms, application-code: 9ms)
