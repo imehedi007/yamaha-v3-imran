@@ -6,6 +6,8 @@ CREATE TABLE IF NOT EXISTS users (
     name VARCHAR(255) NOT NULL,
     phone VARCHAR(20) NOT NULL UNIQUE,
     dob VARCHAR(50),
+    gender VARCHAR(20),
+    division VARCHAR(50),
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 

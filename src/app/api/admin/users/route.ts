@@ -24,6 +24,8 @@ export async function GET(req: Request) {
           u.name, 
           u.phone, 
           u.dob,
+          u.gender,
+          u.division,
           u.created_at,
           COUNT(g.id) as total_generations
         FROM users u

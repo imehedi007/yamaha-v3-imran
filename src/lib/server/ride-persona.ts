@@ -78,7 +78,8 @@ const NEGATIVE_PROMPT_TERMS = [
   'cartoon appearance',
   'illustration look',
   'CGI-looking skin',
-  'bike number plate'
+  'bike number plate',
+  'rusted pipe'
 ] as const;
 
 function parseJsonRecord<T>(value: unknown, fallback: T): T {
@@ -156,6 +157,18 @@ function buildNegativePromptBlock() {
 
 function buildFinalMood(destinationMood: string, aspiration: string) {
   return `${destinationMood} ${aspiration}`.replace(/\s+/g, ' ').trim();
+}
+
+function buildGenderGuidance(gender?: string | null) {
+  if (gender === 'Female') {
+    return 'Use realistic female body structure, natural feminine posture, accurate shoulder-to-waist-to-hip proportions, feminine limb shape, and clean women rider styling while preserving the exact person from the reference image.';
+  }
+
+  if (gender === 'Male') {
+    return 'Use realistic male body structure, natural masculine posture, accurate body proportions, and clean rider styling while preserving the exact person from the reference image.';
+  }
+
+  return null;
 }
 
 export function parsePersonaPayload(persona: string): PersonaPayload {
@@ -310,6 +323,7 @@ export function buildImagePrompt(args: {
   destinationScene: string;
   destinationMood: string;
   aspiration: string;
+  gender?: string | null;
 }) {
   const destinationScene = args.destinationScene || 'a premium scenic road';
   const destinationMood = args.destinationMood || 'confident, premium, and cinematic';
@@ -317,6 +331,7 @@ export function buildImagePrompt(args: {
   const selectedPose = selectRandomPose();
   const negativePromptBlock = buildNegativePromptBlock();
   const finalMood = buildFinalMood(destinationMood, aspiration);
+  const genderGuidance = buildGenderGuidance(args.gender);
 
   return [
     FIXED_IDENTITY_BLOCK,
@@ -324,6 +339,7 @@ export function buildImagePrompt(args: {
     'Randomly select exactly one approved pose and use only that pose.',
     'Do not mix poses or body positions.',
     'Maintain realistic anatomy, balanced posture, natural body mechanics, clean hands, and correct limb proportions.',
+    genderGuidance,
     `Pose: ${selectedPose}`,
     `Vehicle: realistic ${args.bikeModel} in ${args.bikeColor}, with authentic model presence, accurate proportions, clean frame geometry, realistic materials, proper reflections, detailed mechanical parts, and high-quality motorcycle styling.`,
     `Environment: ${destinationScene}.`,

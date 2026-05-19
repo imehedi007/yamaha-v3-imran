@@ -17,6 +17,18 @@ async function getGenerationByHashId(hashId: string) {
   return generations[0] || null;
 }
 
+async function getUserProfile(userId: number) {
+  const users = await query<any[]>(
+    `SELECT gender, division
+     FROM users
+     WHERE id = ?
+     LIMIT 1`,
+    [userId]
+  );
+
+  return users[0] || null;
+}
+
 function normalizeRequestId(value: FormDataEntryValue | null) {
   if (typeof value !== 'string') return null;
   const trimmed = value.trim().toLowerCase();
@@ -150,6 +162,8 @@ export async function POST(req: Request) {
 
     const selection = await selectBikeForPersona(personaData);
     mark('bike-selected');
+    const userProfile = await getUserProfile(userId);
+    mark('user-profile-loaded');
     const bikeId = selection.bike.id;
     const bikeModel = selection.bike.model_name;
     const bikeColor = selection.resolvedColor;
@@ -219,6 +233,7 @@ export async function POST(req: Request) {
       destinationScene,
       destinationMood,
       aspiration: aspirationTone,
+      gender: userProfile?.gender || null,
     });
     console.log('[api/generate] Final image prompt:', finalPrompt);
 

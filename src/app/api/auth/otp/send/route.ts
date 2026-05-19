@@ -8,7 +8,9 @@ import { SignJWT } from 'jose';
 const sendOtpSchema = z.object({
   name: z.string().min(1).optional(),
   phone: z.string().min(10).max(15),
-  dob: z.string().optional()
+  dob: z.string().optional(),
+  gender: z.enum(['Male', 'Female']),
+  division: z.enum(['Dhaka', 'Chattogram', 'Rajshahi', 'Khulna', 'Barishal', 'Sylhet', 'Rangpur', 'Mymensingh']),
 });
 
 export async function POST(req: Request) {
@@ -20,7 +22,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Invalid phone number' }, { status: 400 });
     }
 
-    const { name, phone, dob } = result.data;
+    const { name, phone, dob, gender, division } = result.data;
 
     // Check if OTP is disabled in settings
     const settings = await query<any[]>("SELECT setting_value FROM app_settings WHERE setting_key = 'otp_enabled'");
@@ -36,13 +38,13 @@ export async function POST(req: Request) {
           return NextResponse.json({ error: 'Name is required for new users' }, { status: 400 });
         }
         const insertResult = await query<any>(
-          `INSERT INTO users (name, phone, dob) VALUES (?, ?, ?)`,
-          [name, phone, dob]
+          `INSERT INTO users (name, phone, dob, gender, division) VALUES (?, ?, ?, ?, ?)`,
+          [name, phone, dob, gender, division]
         );
         userId = insertResult.insertId;
       } else {
         userId = users[0].id;
-        if (name || dob) {
+        if (name || dob || gender || division) {
           let updateSql = 'UPDATE users SET ';
           const params: any[] = [];
           if (name) {
@@ -52,6 +54,14 @@ export async function POST(req: Request) {
           if (dob) {
             updateSql += 'dob = ?, ';
             params.push(dob);
+          }
+          if (gender) {
+            updateSql += 'gender = ?, ';
+            params.push(gender);
+          }
+          if (division) {
+            updateSql += 'division = ?, ';
+            params.push(division);
           }
           updateSql = updateSql.slice(0, -2) + ' WHERE id = ?';
           params.push(userId);

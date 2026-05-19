@@ -59,7 +59,7 @@ export default function UsersPage() {
     
     if (dataToExport.length === 0) return;
 
-    const keys = ['id', 'name', 'phone', 'dob', 'created_at', 'total_generations'];
+    const keys = ['id', 'name', 'phone', 'dob', 'gender', 'division', 'created_at', 'total_generations'];
     const csvContent = "data:text/csv;charset=utf-8,"
       + keys.join(",") + "\n"
       + dataToExport.map(row => keys.map(k => `"${String(row[k] || '').replace(/"/g, '""')}"`).join(",")).join("\n");
@@ -100,6 +100,8 @@ export default function UsersPage() {
               <div style={{ textAlign: 'right', marginRight: '48px' }}>
                 <div style={{ fontSize: '20px', fontWeight: 600, color: '#007aff' }}>{selectedUser.phone}</div>
                 <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.3)', marginTop: '2px' }}>{selectedUser.dob || 'Age Range N/A'}</div>
+                <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.3)', marginTop: '2px' }}>{selectedUser.gender || 'Gender N/A'}</div>
+                <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.3)', marginTop: '2px' }}>{selectedUser.division || 'Division N/A'}</div>
               </div>
             </div>
           </div>
@@ -175,6 +177,8 @@ export default function UsersPage() {
               <th>Name</th>
               <th>Phone</th>
               <th>Age Range</th>
+              <th>Gender</th>
+              <th>Division</th>
               <th>Gens</th>
               <th>Joined</th>
               <th>Actions</th>
@@ -182,7 +186,7 @@ export default function UsersPage() {
           </thead>
           <tbody>
             {loading ? (
-              <tr><td colSpan={8} style={{ textAlign: 'center', padding: '40px' }}>Loading...</td></tr>
+              <tr><td colSpan={10} style={{ textAlign: 'center', padding: '40px' }}>Loading...</td></tr>
             ) : (
               users.map(u => (
                 <tr key={u.id} className={selectedIds.includes(u.id) ? styles.rowSelected : ''}>
@@ -193,6 +197,8 @@ export default function UsersPage() {
                   <td style={{ fontWeight: 600 }}>{u.name}</td>
                   <td>{u.phone}</td>
                   <td>{u.dob || 'N/A'}</td>
+                  <td>{u.gender || 'N/A'}</td>
+                  <td>{u.division || 'N/A'}</td>
                   <td>{u.total_generations}</td>
                   <td>{new Date(u.created_at).toLocaleDateString()}</td>
                   <td>

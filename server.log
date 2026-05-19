@@ -6,7 +6,7 @@
 - Local:         http://localhost:3000
 - Network:       http://192.168.0.102:3000
 - Environments: .env.local
-✓ Ready in 278ms
+✓ Ready in 267ms
 ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
  We detected multiple lockfiles and selected the directory of /Users/esmailkhalifa/My File/git 2/package-lock.json as the root directory.
  To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
@@ -15,191 +15,357 @@
    * /Users/esmailkhalifa/My File/git 2/yamaha-v3-imran/package-lock.json
 
 
- GET /upload 200 in 329ms (next.js: 134ms, application-code: 195ms)
- GET /upload 200 in 68ms (next.js: 8ms, application-code: 60ms)
- GET / 200 in 480ms (next.js: 207ms, application-code: 273ms)
- POST /api/auth/otp/send 200 in 244ms (next.js: 144ms, application-code: 100ms)
- GET /quiz 200 in 50ms (next.js: 29ms, application-code: 21ms)
- GET /api/quiz/questions 200 in 79ms (next.js: 54ms, application-code: 26ms)
- GET /api/quiz/questions 200 in 18ms (next.js: 4ms, application-code: 14ms)
- POST /api/quiz/submit 200 in 118ms (next.js: 106ms, application-code: 12ms)
- GET /upload 200 in 33ms (next.js: 3ms, application-code: 30ms)
- GET /api/generate?requestId=dd867cf76e4546bd8207b7a2c62d189d 200 in 93ms (next.js: 87ms, application-code: 6ms)
+ GET / 200 in 441ms (next.js: 185ms, application-code: 257ms)
+ GET / 200 in 44ms (next.js: 12ms, application-code: 32ms)
+✓ Compiled in 285ms
+ POST /api/auth/otp/send 200 in 268ms (next.js: 142ms, application-code: 126ms)
+ GET /quiz 200 in 43ms (next.js: 20ms, application-code: 22ms)
+ GET /api/quiz/questions 200 in 72ms (next.js: 42ms, application-code: 30ms)
+ GET /api/quiz/questions 200 in 10ms (next.js: 3ms, application-code: 7ms)
+ POST /api/quiz/submit 200 in 63ms (next.js: 45ms, application-code: 18ms)
+ GET /upload 200 in 51ms (next.js: 24ms, application-code: 26ms)
+ GET /api/generate?requestId=d53123038fb94d89a73a244df96bb00a 200 in 424ms (next.js: 346ms, application-code: 77ms)
 [api/generate] form-data-parsed at 4ms
-[api/generate] auth-verified at 50ms
-[api/generate] rate-limit-checked at 68ms
-[api/generate] photo-encoded at 69ms
-[api/generate] persona-parsed at 69ms
-[api/generate] bike-selected at 73ms
-[api/generate] generation-reserved at 77ms
+[api/generate] auth-verified at 13ms
+[api/generate] rate-limit-checked at 34ms
+[api/generate] photo-encoded at 35ms
+[api/generate] persona-parsed at 35ms
+[api/generate] bike-selected at 48ms
+[api/generate] user-profile-loaded at 50ms
+[api/generate] generation-reserved at 61ms
 [api/generate] Generating persona copy and image in parallel...
-[api/generate] Final image prompt: Create a premium ultra-photorealistic lifestyle portrait of the exact person from the reference image. Preserve exact facial identity, hairstyle, facial hair, age, and natural likeness. Vertical 3:4 composition. Full body visible. Full motorcycle visible. Face unobstructed. Helmet not worn. Randomly select exactly one approved pose and use only that pose. Do not mix poses or body positions. Maintain realistic anatomy, balanced posture, natural body mechanics, clean hands, and correct limb proportions. Pose: Standing beside the motorcycle, one hand adjusting the collar area, the other holding a helmet, calm cinematic confidence. Vehicle: realistic Yamaha Saluto in Pastel Dark Grey, with authentic model presence, accurate proportions, clean frame geometry, realistic materials, proper reflections, detailed mechanical parts, and high-quality motorcycle styling. Environment: A serene coastal marine drive road beside a tropical Maldives-style beach. Crystal-clear blue ocean, white sand, palm trees, and luxury beach villas in the background. Soft sunlight with a calm sea breeze mood. Open scenic road, realistic premium travel photography, cinematic composition, peaceful and aspirational atmosphere.. Mood: The Serene Traveler: Motivated by freedom, calmness, and the relaxation of scenic coastal experiences. Balance and intellect. Wardrobe: premium Yamaha-inspired biker streetwear, polished, clean, and well-fitted. Style: commercial motorcycle photography, cinematic depth of field, natural lighting, realistic shadows, high-detail textures, realistic skin tones, and seamless face integration. Negative prompt: torn clothing, damaged trousers, worn-out shoes, dirty outfit, messy wardrobe, broken accessories, deformed motorcycle, warped motorcycle frame, rusty motorcycle parts, low-quality motorcycle detailing, blurry details, distorted anatomy, extra limbs, awkward hands, unnatural posture, duplicated body parts, oversaturated colors, poorly rendered helmet, floating objects, cluttered background, cartoon appearance, illustration look, CGI-looking skin, bike number plate.
+[api/generate] Final image prompt: Create a premium ultra-photorealistic lifestyle portrait of the exact person from the reference image. Preserve exact facial identity, hairstyle, facial hair, age, and natural likeness. Vertical 3:4 composition. Full body visible. Full motorcycle visible. Face unobstructed. Helmet not worn. Randomly select exactly one approved pose and use only that pose. Do not mix poses or body positions. Maintain realistic anatomy, balanced posture, natural body mechanics, clean hands, and correct limb proportions. Use realistic female body structure, natural feminine posture, accurate shoulder-to-waist-to-hip proportions, feminine limb shape, and clean women rider styling while preserving the exact person from the reference image. Pose: Standing beside the motorcycle, one hand adjusting the collar area, the other holding a helmet, calm cinematic confidence. Vehicle: realistic Yamaha FZS V4 in Matt Black (Golden Wheel), with authentic model presence, accurate proportions, clean frame geometry, realistic materials, proper reflections, detailed mechanical parts, and high-quality motorcycle styling. Environment: A serene coastal marine drive road beside a tropical Maldives-style beach. Crystal-clear blue ocean, white sand, palm trees, and luxury beach villas in the background. Soft sunlight with a calm sea breeze mood. Open scenic road, realistic premium travel photography, cinematic composition, peaceful and aspirational atmosphere.. Mood: The Serene Traveler: Motivated by freedom, calmness, and the relaxation of scenic coastal experiences. Mastery and depth. Wardrobe: premium Yamaha-inspired biker streetwear, polished, clean, and well-fitted. Style: commercial motorcycle photography, cinematic depth of field, natural lighting, realistic shadows, high-detail textures, realistic skin tones, and seamless face integration. Negative prompt: torn clothing, damaged trousers, worn-out shoes, dirty outfit, messy wardrobe, broken accessories, deformed motorcycle, warped motorcycle frame, rusty motorcycle parts, low-quality motorcycle detailing, blurry details, distorted anatomy, extra limbs, awkward hands, unnatural posture, duplicated body parts, oversaturated colors, poorly rendered helmet, floating objects, cluttered background, cartoon appearance, illustration look, CGI-looking skin, bike number plate.
 [generateCinematicImage] starting request {
   model: 'gemini-3.1-flash-image-preview',
   mimeType: 'image/jpeg',
-  promptLength: 2096,
+  promptLength: 2322,
   referenceImageCopies: 3,
   referenceImageReason: 'intentional face-match boost',
-  base64Chars: 256268,
-  approxInputBytes: 192201
+  base64Chars: 239640,
+  approxInputBytes: 179730
+}
+Gemini 503 error. Retrying in 1000ms...
+Gemini 503 error. Retrying in 2000ms...
+Gemini text generation failed after retries: Error [ApiError]: {"error":{"code":503,"message":"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.","status":"UNAVAILABLE"}}
+    at async generatePersonaCopy (src/lib/server/gemini.ts:22:24)
+    at async POST (src/app/api/generate/route.ts:241:46)
+  20 |   while (retries > 0) {
+  21 |     try {
+> 22 |       const response = await client.models.generateContent({
+     |                        ^
+  23 |         model,
+  24 |         contents: prompt,
+  25 |       }); {
+  status: 503
+}
+ GET / 200 in 104ms (next.js: 42ms, application-code: 62ms)
+ GET /apple-touch-icon-precomposed.png 404 in 970ms (next.js: 935ms, application-code: 35ms)
+ GET /apple-touch-icon.png 404 in 25ms (next.js: 1756µs, application-code: 23ms)
+ POST /api/auth/otp/send 200 in 128ms (next.js: 22ms, application-code: 105ms)
+ GET /quiz 200 in 23ms (next.js: 5ms, application-code: 18ms)
+ GET /api/quiz/questions 200 in 31ms (next.js: 3ms, application-code: 28ms)
+ GET /api/quiz/questions 200 in 32ms (next.js: 8ms, application-code: 24ms)
+ POST /api/quiz/submit 200 in 15ms (next.js: 5ms, application-code: 10ms)
+ GET /upload 200 in 19ms (next.js: 3ms, application-code: 16ms)
+ GET /api/generate?requestId=fc88fd771ebf4d6a8685e56e35bd2854 200 in 83ms (next.js: 20ms, application-code: 63ms)
+[api/generate] form-data-parsed at 2ms
+[api/generate] auth-verified at 12ms
+[api/generate] rate-limit-checked at 41ms
+[api/generate] photo-encoded at 42ms
+[api/generate] persona-parsed at 42ms
+[api/generate] bike-selected at 48ms
+[api/generate] user-profile-loaded at 49ms
+[api/generate] generation-reserved at 62ms
+[api/generate] Generating persona copy and image in parallel...
+[api/generate] Final image prompt: Create a premium ultra-photorealistic lifestyle portrait of the exact person from the reference image. Preserve exact facial identity, hairstyle, facial hair, age, and natural likeness. Vertical 3:4 composition. Full body visible. Full motorcycle visible. Face unobstructed. Helmet not worn. Randomly select exactly one approved pose and use only that pose. Do not mix poses or body positions. Maintain realistic anatomy, balanced posture, natural body mechanics, clean hands, and correct limb proportions. Use realistic female body structure, natural feminine posture, accurate shoulder-to-waist-to-hip proportions, feminine limb shape, and clean women rider styling while preserving the exact person from the reference image. Pose: Full-body standing beside the motorcycle, arms crossed, body angled toward the bike, head slightly turned away, confident presence. Vehicle: realistic Yamaha Saluto in Blue, with authentic model presence, accurate proportions, clean frame geometry, realistic materials, proper reflections, detailed mechanical parts, and high-quality motorcycle styling. Environment: A cinematic winding hill road through lush green mountains, layered hills in the background, soft morning mist, pine trees, golden-hour sunlight, clear open road, fresh mountain atmosphere, realistic scenic travel photography, premium cinematic depth, peaceful adventurous riding mood.. Mood: The Nature Enthusiast: Values peace, elevation, and the refreshing spirit of scenic mountain adventures. Boundless potential. Wardrobe: premium Yamaha-inspired biker streetwear, polished, clean, and well-fitted. Style: commercial motorcycle photography, cinematic depth of field, natural lighting, realistic shadows, high-detail textures, realistic skin tones, and seamless face integration. Negative prompt: torn clothing, damaged trousers, worn-out shoes, dirty outfit, messy wardrobe, broken accessories, deformed motorcycle, warped motorcycle frame, rusty motorcycle parts, low-quality motorcycle detailing, blurry details, distorted anatomy, extra limbs, awkward hands, unnatural posture, duplicated body parts, oversaturated colors, poorly rendered helmet, floating objects, cluttered background, cartoon appearance, illustration look, CGI-looking skin, bike number plate.
+[generateCinematicImage] starting request {
+  model: 'gemini-3.1-flash-image-preview',
+  mimeType: 'image/jpeg',
+  promptLength: 2272,
+  referenceImageCopies: 3,
+  referenceImageReason: 'intentional face-match boost',
+  base64Chars: 185648,
+  approxInputBytes: 139236
 }
 [generateCinematicImage] completed {
   attempt: 1,
-  attemptMs: 17453,
-  totalMs: 17455,
+  attemptMs: 21675,
+  totalMs: 21675,
   outputMimeType: 'image/jpeg',
-  outputBase64Chars: 1025808
+  outputBase64Chars: 1024992
 }
-[api/generate] ai-complete at 17537ms
+[api/generate] ai-complete at 21738ms
 [api/generate] Uploading to S3...
-[api/generate] s3-uploaded at 18473ms
+[api/generate] s3-uploaded at 22760ms
 [api/generate] Saving to database...
-[api/generate] db-saved at 18483ms
-[api/generate] cookie-cleared at 18484ms
+[api/generate] db-saved at 22769ms
+[api/generate] cookie-cleared at 22769ms
 [api/generate] completed {
-  totalMs: 18485,
+  totalMs: 22770,
+  checkpoints: {
+    'form-data-parsed': 2,
+    'auth-verified': 12,
+    'rate-limit-checked': 41,
+    'photo-encoded': 42,
+    'persona-parsed': 42,
+    'bike-selected': 48,
+    'user-profile-loaded': 49,
+    'generation-reserved': 62,
+    'ai-complete': 21738,
+    's3-uploaded': 22760,
+    'db-saved': 22769,
+    'cookie-cleared': 22769
+  },
+  uploadedPhotoBytes: 139235,
+  encodedPhotoBase64Chars: 185648,
+  generatedImageBase64Chars: 1025015
+}
+ POST /api/generate 200 in 22.8s (next.js: 1593µs, application-code: 22.8s)
+ GET /result/fc88fd771ebf4d6a8685e56e35bd2854 200 in 617ms (next.js: 556ms, application-code: 61ms)
+[generateCinematicImage] failed { elapsedMs: 301540, error: 'fetch failed', status: undefined }
+Gemini Image Generation Error: [TypeError: fetch failed] {
+  [cause]: Error [HeadersTimeoutError]: Headers Timeout Error
+      at ignore-listed frames {
+    code: 'UND_ERR_HEADERS_TIMEOUT'
+  }
+}
+Generate API error: Error: AI Generation failed: fetch failed
+    at <unknown> (src/app/api/generate/route.ts:245:15)
+    at async POST (src/app/api/generate/route.ts:241:46)
+  243 |       generateCinematicImage(base64Image, mimeType, finalPrompt).catch((aiError: any) => {
+  244 |         console.error('Gemini Image Generation Error:', aiError);
+> 245 |         throw new Error(`AI Generation failed: ${aiError.message || 'Unknown AI error'}`);
+      |               ^
+  246 |       })
+  247 |     ]);
+  248 |     mark('ai-complete');
+[api/generate] failed {
+  totalMs: 301858,
   checkpoints: {
     'form-data-parsed': 4,
-    'auth-verified': 50,
-    'rate-limit-checked': 68,
-    'photo-encoded': 69,
-    'persona-parsed': 69,
-    'bike-selected': 73,
-    'generation-reserved': 77,
-    'ai-complete': 17537,
-    's3-uploaded': 18473,
-    'db-saved': 18483,
-    'cookie-cleared': 18484
+    'auth-verified': 13,
+    'rate-limit-checked': 34,
+    'photo-encoded': 35,
+    'persona-parsed': 35,
+    'bike-selected': 48,
+    'user-profile-loaded': 50,
+    'generation-reserved': 61
   },
-  uploadedPhotoBytes: 192199,
-  encodedPhotoBase64Chars: 256268,
-  generatedImageBase64Chars: 1025831
+  error: 'AI Generation failed: fetch failed'
 }
- POST /api/generate 200 in 18.5s (next.js: 1433µs, application-code: 18.5s)
- GET /result/dd867cf76e4546bd8207b7a2c62d189d 200 in 543ms (next.js: 477ms, application-code: 66ms)
- GET / 200 in 56ms (next.js: 12ms, application-code: 44ms)
- POST /api/auth/otp/send 200 in 36ms (next.js: 9ms, application-code: 27ms)
- GET /quiz 200 in 21ms (next.js: 5ms, application-code: 16ms)
- GET /api/quiz/questions 200 in 42ms (next.js: 8ms, application-code: 34ms)
- GET /api/quiz/questions 200 in 17ms (next.js: 1374µs, application-code: 16ms)
- POST /api/quiz/submit 200 in 30ms (next.js: 9ms, application-code: 22ms)
- GET /upload 200 in 26ms (next.js: 3ms, application-code: 22ms)
- GET /api/generate?requestId=978477a5a379473dabec99f12519a64c 200 in 54ms (next.js: 37ms, application-code: 17ms)
+ POST /api/generate 500 in 5.0min (next.js: 1470µs, application-code: 5.0min)
+ GET /api/generate?requestId=d53123038fb94d89a73a244df96bb00a 200 in 36ms (next.js: 15ms, application-code: 21ms)
+ GET / 200 in 72ms (next.js: 31ms, application-code: 41ms)
+ POST /api/auth/otp/send 200 in 89ms (next.js: 10ms, application-code: 79ms)
+ GET /quiz 200 in 35ms (next.js: 5ms, application-code: 30ms)
+ GET /api/quiz/questions 200 in 24ms (next.js: 4ms, application-code: 20ms)
+ GET /api/quiz/questions 200 in 27ms (next.js: 1843µs, application-code: 25ms)
+ POST /api/quiz/submit 200 in 24ms (next.js: 8ms, application-code: 16ms)
+ GET /upload 200 in 29ms (next.js: 10ms, application-code: 19ms)
+ GET /api/generate?requestId=f37bfe638cb24e19a1ff9ef6b0637c9a 200 in 43ms (next.js: 20ms, application-code: 22ms)
 [api/generate] form-data-parsed at 3ms
-[api/generate] auth-verified at 8ms
-[api/generate] rate-limit-checked at 32ms
-[api/generate] photo-encoded at 34ms
-[api/generate] persona-parsed at 34ms
-[api/generate] bike-selected at 39ms
-[api/generate] generation-reserved at 57ms
+[api/generate] auth-verified at 16ms
+[api/generate] rate-limit-checked at 34ms
+[api/generate] photo-encoded at 35ms
+[api/generate] persona-parsed at 35ms
+[api/generate] bike-selected at 38ms
+[api/generate] user-profile-loaded at 39ms
+[api/generate] generation-reserved at 47ms
 [api/generate] Generating persona copy and image in parallel...
-[api/generate] Final image prompt: Create a premium ultra-photorealistic lifestyle portrait of the exact person from the reference image. Preserve exact facial identity, hairstyle, facial hair, age, and natural likeness. Vertical 3:4 composition. Full body visible. Full motorcycle visible. Face unobstructed. Helmet not worn. Randomly select exactly one approved pose and use only that pose. Do not mix poses or body positions. Maintain realistic anatomy, balanced posture, natural body mechanics, clean hands, and correct limb proportions. Pose: Standing beside the motorcycle, one hand adjusting the collar area, the other holding a helmet, calm cinematic confidence. Vehicle: realistic Yamaha FZ-25 in Black, with authentic model presence, accurate proportions, clean frame geometry, realistic materials, proper reflections, detailed mechanical parts, and high-quality motorcycle styling. Environment: A cinematic winding hill road through lush green mountains, layered hills in the background, soft morning mist, pine trees, golden-hour sunlight, clear open road, fresh mountain atmosphere, realistic scenic travel photography, premium cinematic depth, peaceful adventurous riding mood.. Mood: The Nature Enthusiast: Values peace, elevation, and the refreshing spirit of scenic mountain adventures. Mastery and depth. Wardrobe: premium Yamaha-inspired biker streetwear, polished, clean, and well-fitted. Style: commercial motorcycle photography, cinematic depth of field, natural lighting, realistic shadows, high-detail textures, realistic skin tones, and seamless face integration. Negative prompt: torn clothing, damaged trousers, worn-out shoes, dirty outfit, messy wardrobe, broken accessories, deformed motorcycle, warped motorcycle frame, rusty motorcycle parts, low-quality motorcycle detailing, blurry details, distorted anatomy, extra limbs, awkward hands, unnatural posture, duplicated body parts, oversaturated colors, poorly rendered helmet, floating objects, cluttered background, cartoon appearance, illustration look, CGI-looking skin, bike number plate.
+[api/generate] Final image prompt: Create a premium ultra-photorealistic lifestyle portrait of the exact person from the reference image. Preserve exact facial identity, hairstyle, facial hair, age, and natural likeness. Vertical 3:4 composition. Full body visible. Full motorcycle visible. Face unobstructed. Helmet not worn. Randomly select exactly one approved pose and use only that pose. Do not mix poses or body positions. Maintain realistic anatomy, balanced posture, natural body mechanics, clean hands, and correct limb proportions. Use realistic female body structure, natural feminine posture, accurate shoulder-to-waist-to-hip proportions, feminine limb shape, and clean women rider styling while preserving the exact person from the reference image. Pose: Standing beside the motorcycle, one hand adjusting the collar area, the other holding a helmet, calm cinematic confidence. Vehicle: realistic Yamaha Fazer in Red, with authentic model presence, accurate proportions, clean frame geometry, realistic materials, proper reflections, detailed mechanical parts, and high-quality motorcycle styling. Environment: A cinematic winding hill road through lush green mountains, layered hills in the background, soft morning mist, pine trees, golden-hour sunlight, clear open road, fresh mountain atmosphere, realistic scenic travel photography, premium cinematic depth, peaceful adventurous riding mood.. Mood: The Nature Enthusiast: Values peace, elevation, and the refreshing spirit of scenic mountain adventures. Vitality and zest. Wardrobe: premium Yamaha-inspired biker streetwear, polished, clean, and well-fitted. Style: commercial motorcycle photography, cinematic depth of field, natural lighting, realistic shadows, high-detail textures, realistic skin tones, and seamless face integration. Negative prompt: torn clothing, damaged trousers, worn-out shoes, dirty outfit, messy wardrobe, broken accessories, deformed motorcycle, warped motorcycle frame, rusty motorcycle parts, low-quality motorcycle detailing, blurry details, distorted anatomy, extra limbs, awkward hands, unnatural posture, duplicated body parts, oversaturated colors, poorly rendered helmet, floating objects, cluttered background, cartoon appearance, illustration look, CGI-looking skin, bike number plate, rusted pipe.
 [generateCinematicImage] starting request {
   model: 'gemini-3.1-flash-image-preview',
   mimeType: 'image/jpeg',
-  promptLength: 2040,
+  promptLength: 2272,
+  referenceImageCopies: 3,
+  referenceImageReason: 'intentional face-match boost',
+  base64Chars: 355944,
+  approxInputBytes: 266958
+}
+Gemini 503 error. Retrying in 1000ms...
+[generateCinematicImage] completed {
+  attempt: 1,
+  attemptMs: 25726,
+  totalMs: 25726,
+  outputMimeType: 'image/jpeg',
+  outputBase64Chars: 1000116
+}
+[api/generate] ai-complete at 25775ms
+[api/generate] Uploading to S3...
+[api/generate] s3-uploaded at 27066ms
+[api/generate] Saving to database...
+[api/generate] db-saved at 27079ms
+[api/generate] cookie-cleared at 27081ms
+[api/generate] completed {
+  totalMs: 27082,
+  checkpoints: {
+    'form-data-parsed': 3,
+    'auth-verified': 16,
+    'rate-limit-checked': 34,
+    'photo-encoded': 35,
+    'persona-parsed': 35,
+    'bike-selected': 38,
+    'user-profile-loaded': 39,
+    'generation-reserved': 47,
+    'ai-complete': 25775,
+    's3-uploaded': 27066,
+    'db-saved': 27079,
+    'cookie-cleared': 27081
+  },
+  uploadedPhotoBytes: 266956,
+  encodedPhotoBase64Chars: 355944,
+  generatedImageBase64Chars: 1000139
+}
+ POST /api/generate 200 in 27.1s (next.js: 2ms, application-code: 27.1s)
+ GET /result/f37bfe638cb24e19a1ff9ef6b0637c9a 200 in 42ms (next.js: 11ms, application-code: 31ms)
+ GET /admin 200 in 336ms (next.js: 179ms, application-code: 156ms)
+ GET /api/admin/auth/me 200 in 75ms (next.js: 61ms, application-code: 14ms)
+ GET /api/admin/quiz/questions 200 in 278ms (next.js: 202ms, application-code: 76ms)
+ GET /api/admin/bikes 200 in 280ms (next.js: 175ms, application-code: 105ms)
+ GET /api/admin/users?limit=1 200 in 283ms (next.js: 76ms, application-code: 207ms)
+ GET /api/admin/generations?limit=1 200 in 284ms (next.js: 145ms, application-code: 139ms)
+ GET /api/admin/bikes 200 in 12ms (next.js: 6ms, application-code: 6ms)
+ GET /api/admin/quiz/questions 200 in 15ms (next.js: 4ms, application-code: 10ms)
+ GET /api/admin/users?limit=1 200 in 19ms (next.js: 7ms, application-code: 12ms)
+ GET /api/admin/generations?limit=1 200 in 12ms (next.js: 1224µs, application-code: 10ms)
+ GET /admin/generations 200 in 73ms (next.js: 41ms, application-code: 32ms)
+ GET /api/admin/auth/me 200 in 12ms (next.js: 9ms, application-code: 3ms)
+ GET /api/admin/generations?page=1&limit=20 200 in 21ms (next.js: 6ms, application-code: 15ms)
+ GET /api/admin/generations?page=1&limit=20 200 in 11ms (next.js: 1474µs, application-code: 10ms)
+ GET /result/d53123038fb94d89a73a244df96bb00a 200 in 92ms (next.js: 12ms, application-code: 80ms)
+ GET /upload 200 in 169ms (next.js: 64ms, application-code: 105ms)
+ GET / 200 in 160ms (next.js: 39ms, application-code: 121ms)
+ GET / 200 in 68ms (next.js: 14ms, application-code: 54ms)
+ GET / 200 in 14ms (next.js: 2ms, application-code: 12ms)
+ GET / 200 in 53ms (next.js: 13ms, application-code: 40ms)
+ GET / 200 in 12ms (next.js: 1773µs, application-code: 10ms)
+✓ Compiled in 127ms
+✓ Compiled in 189ms
+✓ Compiled in 32ms
+✓ Compiled in 29ms
+✓ Compiled in 346ms
+✓ Compiled in 26ms
+✓ Compiled in 114ms
+ GET / 200 in 69ms (next.js: 21ms, application-code: 48ms)
+✓ Compiled in 36ms
+ GET / 200 in 111ms (next.js: 36ms, application-code: 75ms)
+✓ Compiled in 23ms
+✓ Compiled in 194ms
+ GET / 200 in 338ms (next.js: 125ms, application-code: 213ms)
+✓ Compiled in 120ms
+ POST /api/auth/otp/send 200 in 186ms (next.js: 15ms, application-code: 171ms)
+ GET /quiz 200 in 30ms (next.js: 5ms, application-code: 24ms)
+ GET /api/quiz/questions 200 in 52ms (next.js: 5ms, application-code: 47ms)
+ GET /api/quiz/questions 200 in 9ms (next.js: 999µs, application-code: 8ms)
+ POST /api/quiz/submit 200 in 44ms (next.js: 15ms, application-code: 28ms)
+ GET /upload 200 in 37ms (next.js: 7ms, application-code: 30ms)
+ GET /api/generate?requestId=2e1c098111dd481f8ff8339116448fc7 200 in 69ms (next.js: 43ms, application-code: 27ms)
+[api/generate] form-data-parsed at 6ms
+[api/generate] auth-verified at 13ms
+[api/generate] rate-limit-checked at 30ms
+[api/generate] photo-encoded at 31ms
+[api/generate] persona-parsed at 31ms
+[api/generate] bike-selected at 39ms
+[api/generate] user-profile-loaded at 40ms
+[api/generate] generation-reserved at 66ms
+[api/generate] Generating persona copy and image in parallel...
+[api/generate] Final image prompt: Create a premium ultra-photorealistic lifestyle portrait of the exact person from the reference image. Preserve exact facial identity, hairstyle, facial hair, age, and natural likeness. Vertical 3:4 composition. Full body visible. Full motorcycle visible. Face unobstructed. Helmet not worn. Randomly select exactly one approved pose and use only that pose. Do not mix poses or body positions. Maintain realistic anatomy, balanced posture, natural body mechanics, clean hands, and correct limb proportions. Use realistic female body structure, natural feminine posture, accurate shoulder-to-waist-to-hip proportions, feminine limb shape, and clean women rider styling while preserving the exact person from the reference image. Pose: Full-body standing beside the motorcycle, arms crossed, body angled toward the bike, head slightly turned away, confident presence. Vehicle: realistic Yamaha Ray ZR 113 in Grey, with authentic model presence, accurate proportions, clean frame geometry, realistic materials, proper reflections, detailed mechanical parts, and high-quality motorcycle styling. Environment: A cinematic off-road racing trail, uneven dirt road, rocky terrain, dust particles, rugged hills and mountains in the background, dramatic wide sky, adventurous riding atmosphere, premium realistic outdoor photography, powerful off-road mood, high-detail terrain, cinematic action-ready composition.. Mood: The Adventurous Trailblazer: Defined by toughness, exploration, and a passion for raw riding energy. Balance and intellect. Wardrobe: premium Yamaha-inspired biker streetwear, polished, clean, and well-fitted. Style: commercial motorcycle photography, cinematic depth of field, natural lighting, realistic shadows, high-detail textures, realistic skin tones, and seamless face integration. Negative prompt: torn clothing, damaged trousers, worn-out shoes, dirty outfit, messy wardrobe, broken accessories, deformed motorcycle, warped motorcycle frame, rusty motorcycle parts, low-quality motorcycle detailing, blurry details, distorted anatomy, extra limbs, awkward hands, unnatural posture, duplicated body parts, oversaturated colors, poorly rendered helmet, floating objects, cluttered background, cartoon appearance, illustration look, CGI-looking skin, bike number plate, rusted pipe.
+[generateCinematicImage] starting request {
+  model: 'gemini-3.1-flash-image-preview',
+  mimeType: 'image/jpeg',
+  promptLength: 2301,
   referenceImageCopies: 3,
   referenceImageReason: 'intentional face-match boost',
   base64Chars: 191188,
   approxInputBytes: 143391
 }
+[generateCinematicImage] failed { elapsedMs: 301233, error: 'fetch failed', status: undefined }
+Gemini Image Generation Error: [TypeError: fetch failed] {
+  [cause]: Error [HeadersTimeoutError]: Headers Timeout Error
+      at ignore-listed frames {
+    code: 'UND_ERR_HEADERS_TIMEOUT'
+  }
+}
+Generate API error: Error: AI Generation failed: fetch failed
+    at <unknown> (src/app/api/generate/route.ts:245:15)
+    at async POST (src/app/api/generate/route.ts:241:46)
+  243 |       generateCinematicImage(base64Image, mimeType, finalPrompt).catch((aiError: any) => {
+  244 |         console.error('Gemini Image Generation Error:', aiError);
+> 245 |         throw new Error(`AI Generation failed: ${aiError.message || 'Unknown AI error'}`);
+      |               ^
+  246 |       })
+  247 |     ]);
+  248 |     mark('ai-complete');
+[api/generate] failed {
+  totalMs: 301644,
+  checkpoints: {
+    'form-data-parsed': 6,
+    'auth-verified': 13,
+    'rate-limit-checked': 30,
+    'photo-encoded': 31,
+    'persona-parsed': 31,
+    'bike-selected': 39,
+    'user-profile-loaded': 40,
+    'generation-reserved': 66
+  },
+  error: 'AI Generation failed: fetch failed'
+}
+ POST /api/generate 500 in 5.0min (next.js: 3ms, application-code: 5.0min)
+ GET /api/generate?requestId=2e1c098111dd481f8ff8339116448fc7 200 in 24ms (next.js: 9ms, application-code: 15ms)
+ GET /api/generate?requestId=82d28bd49ad84785bd5daec8faae3e25 200 in 107ms (next.js: 36ms, application-code: 71ms)
+[api/generate] form-data-parsed at 4ms
+[api/generate] auth-verified at 13ms
+[api/generate] rate-limit-checked at 29ms
+[api/generate] photo-encoded at 29ms
+[api/generate] persona-parsed at 30ms
+[api/generate] bike-selected at 36ms
+[api/generate] user-profile-loaded at 37ms
+[api/generate] generation-reserved at 49ms
+[api/generate] Generating persona copy and image in parallel...
+[api/generate] Final image prompt: Create a premium ultra-photorealistic lifestyle portrait of the exact person from the reference image. Preserve exact facial identity, hairstyle, facial hair, age, and natural likeness. Vertical 3:4 composition. Full body visible. Full motorcycle visible. Face unobstructed. Helmet not worn. Randomly select exactly one approved pose and use only that pose. Do not mix poses or body positions. Maintain realistic anatomy, balanced posture, natural body mechanics, clean hands, and correct limb proportions. Use realistic female body structure, natural feminine posture, accurate shoulder-to-waist-to-hip proportions, feminine limb shape, and clean women rider styling while preserving the exact person from the reference image. Pose: Sitting sideways on the motorcycle seat, one foot on the ground, upper body turned slightly toward camera, one hand resting on or holding the helmet. Vehicle: realistic Yamaha FZS V2 in Matt Grey, with authentic model presence, accurate proportions, clean frame geometry, realistic materials, proper reflections, detailed mechanical parts, and high-quality motorcycle styling. Environment: A cinematic off-road racing trail, uneven dirt road, rocky terrain, dust particles, rugged hills and mountains in the background, dramatic wide sky, adventurous riding atmosphere, premium realistic outdoor photography, powerful off-road mood, high-detail terrain, cinematic action-ready composition.. Mood: The Adventurous Trailblazer: Defined by toughness, exploration, and a passion for raw riding energy. Balance and intellect. Wardrobe: premium Yamaha-inspired biker streetwear, polished, clean, and well-fitted. Style: commercial motorcycle photography, cinematic depth of field, natural lighting, realistic shadows, high-detail textures, realistic skin tones, and seamless face integration. Negative prompt: torn clothing, damaged trousers, worn-out shoes, dirty outfit, messy wardrobe, broken accessories, deformed motorcycle, warped motorcycle frame, rusty motorcycle parts, low-quality motorcycle detailing, blurry details, distorted anatomy, extra limbs, awkward hands, unnatural posture, duplicated body parts, oversaturated colors, poorly rendered helmet, floating objects, cluttered background, cartoon appearance, illustration look, CGI-looking skin, bike number plate, rusted pipe.
+[generateCinematicImage] starting request {
+  model: 'gemini-3.1-flash-image-preview',
+  mimeType: 'image/jpeg',
+  promptLength: 2320,
+  referenceImageCopies: 3,
+  referenceImageReason: 'intentional face-match boost',
+  base64Chars: 191188,
+  approxInputBytes: 143391
+}
+Gemini 503 error. Retrying in 1000ms...
 [generateCinematicImage] completed {
   attempt: 1,
-  attemptMs: 21005,
-  totalMs: 21006,
+  attemptMs: 18071,
+  totalMs: 18071,
   outputMimeType: 'image/jpeg',
-  outputBase64Chars: 1039752
+  outputBase64Chars: 1107028
 }
-[api/generate] ai-complete at 21068ms
+[api/generate] ai-complete at 18121ms
 [api/generate] Uploading to S3...
-[api/generate] s3-uploaded at 21772ms
+[api/generate] s3-uploaded at 18834ms
 [api/generate] Saving to database...
-[api/generate] db-saved at 21782ms
-[api/generate] cookie-cleared at 21783ms
+[api/generate] db-saved at 18847ms
+[api/generate] cookie-cleared at 18849ms
 [api/generate] completed {
-  totalMs: 21783,
+  totalMs: 18850,
   checkpoints: {
-    'form-data-parsed': 3,
-    'auth-verified': 8,
-    'rate-limit-checked': 32,
-    'photo-encoded': 34,
-    'persona-parsed': 34,
-    'bike-selected': 39,
-    'generation-reserved': 57,
-    'ai-complete': 21068,
-    's3-uploaded': 21772,
-    'db-saved': 21782,
-    'cookie-cleared': 21783
+    'form-data-parsed': 4,
+    'auth-verified': 13,
+    'rate-limit-checked': 29,
+    'photo-encoded': 29,
+    'persona-parsed': 30,
+    'bike-selected': 36,
+    'user-profile-loaded': 37,
+    'generation-reserved': 49,
+    'ai-complete': 18121,
+    's3-uploaded': 18834,
+    'db-saved': 18847,
+    'cookie-cleared': 18849
   },
   uploadedPhotoBytes: 143390,
   encodedPhotoBase64Chars: 191188,
-  generatedImageBase64Chars: 1039775
+  generatedImageBase64Chars: 1107051
 }
- POST /api/generate 200 in 21.8s (next.js: 9ms, application-code: 21.8s)
- GET /result/978477a5a379473dabec99f12519a64c 200 in 46ms (next.js: 11ms, application-code: 35ms)
- GET /result/f8c118a847ef47c58bed8cc4a6071f57 200 in 78ms (next.js: 18ms, application-code: 60ms)
- GET /admin/settings 200 in 241ms (next.js: 140ms, application-code: 101ms)
- GET /admin/settings 200 in 29ms (next.js: 2ms, application-code: 27ms)
- GET /api/admin/auth/me 401 in 120ms (next.js: 113ms, application-code: 7ms)
- GET /admin/login 200 in 67ms (next.js: 40ms, application-code: 27ms)
- POST /api/admin/auth/login 200 in 75ms (next.js: 56ms, application-code: 19ms)
- GET /admin 200 in 56ms (next.js: 37ms, application-code: 19ms)
- GET /api/admin/auth/me 200 in 132ms (next.js: 1989µs, application-code: 130ms)
- GET /api/admin/quiz/questions 200 in 224ms (next.js: 180ms, application-code: 44ms)
- GET /api/admin/bikes 200 in 229ms (next.js: 80ms, application-code: 149ms)
- GET /api/admin/users?limit=1 200 in 241ms (next.js: 126ms, application-code: 115ms)
- GET /api/admin/generations?limit=1 200 in 236ms (next.js: 39ms, application-code: 197ms)
- GET /api/admin/bikes 200 in 20ms (next.js: 7ms, application-code: 13ms)
- GET /api/admin/quiz/questions 200 in 23ms (next.js: 5ms, application-code: 18ms)
- GET /api/admin/users?limit=1 200 in 25ms (next.js: 8ms, application-code: 17ms)
- GET /api/admin/generations?limit=1 200 in 27ms (next.js: 11ms, application-code: 16ms)
- GET /admin/generations 200 in 67ms (next.js: 44ms, application-code: 23ms)
- GET /api/admin/auth/me 200 in 16ms (next.js: 11ms, application-code: 4ms)
- GET /api/admin/generations?page=1&limit=20 200 in 28ms (next.js: 4ms, application-code: 24ms)
- GET /api/admin/generations?page=1&limit=20 200 in 12ms (next.js: 1092µs, application-code: 11ms)
- GET /result/dd867cf76e4546bd8207b7a2c62d189d 200 in 80ms (next.js: 14ms, application-code: 66ms)
- GET /admin/users 200 in 1187ms (next.js: 1143ms, application-code: 44ms)
- GET /api/admin/auth/me 200 in 21ms (next.js: 11ms, application-code: 9ms)
- GET /api/admin/users?page=1&limit=20 200 in 37ms (next.js: 5ms, application-code: 32ms)
- GET /api/admin/users?page=1&limit=20 200 in 28ms (next.js: 2ms, application-code: 25ms)
- GET /admin/bikes 200 in 286ms (next.js: 269ms, application-code: 16ms)
- GET /api/admin/auth/me 200 in 16ms (next.js: 11ms, application-code: 5ms)
- GET /api/admin/bikes 200 in 32ms (next.js: 16ms, application-code: 17ms)
- GET /api/admin/bikes 200 in 7ms (next.js: 1580µs, application-code: 5ms)
- GET /admin/quiz 200 in 236ms (next.js: 222ms, application-code: 14ms)
- GET /api/admin/auth/me 200 in 23ms (next.js: 10ms, application-code: 13ms)
- GET /api/admin/bikes 200 in 27ms (next.js: 7ms, application-code: 20ms)
- GET /api/admin/quiz/questions 200 in 29ms (next.js: 9ms, application-code: 20ms)
- GET /api/admin/bikes 200 in 15ms (next.js: 1160µs, application-code: 14ms)
- GET /api/admin/quiz/questions 200 in 20ms (next.js: 7ms, application-code: 13ms)
- GET /api/admin/quiz/options?questionId=1 200 in 262ms (next.js: 229ms, application-code: 33ms)
- PUT /api/admin/quiz/options 200 in 62ms (next.js: 8ms, application-code: 54ms)
- GET /api/admin/quiz/options?questionId=1 200 in 8ms (next.js: 1894µs, application-code: 7ms)
- PUT /api/admin/quiz/options 200 in 27ms (next.js: 7ms, application-code: 21ms)
- GET /api/admin/quiz/options?questionId=1 200 in 11ms (next.js: 1906µs, application-code: 9ms)
- PUT /api/admin/quiz/options 200 in 20ms (next.js: 5ms, application-code: 15ms)
- GET /api/admin/quiz/options?questionId=1 200 in 11ms (next.js: 1947µs, application-code: 9ms)
- PUT /api/admin/quiz/options 200 in 20ms (next.js: 4ms, application-code: 16ms)
- GET /api/admin/quiz/options?questionId=1 200 in 10ms (next.js: 1910µs, application-code: 9ms)
- GET /admin/bikes 200 in 28ms (next.js: 6ms, application-code: 22ms)
- GET /api/admin/bikes 200 in 13ms (next.js: 3ms, application-code: 9ms)
- GET /api/admin/auth/me 200 in 6ms (next.js: 1136µs, application-code: 4ms)
- GET /api/admin/bikes 200 in 5ms (next.js: 743µs, application-code: 4ms)
- DELETE /api/admin/bikes?id=48 200 in 18ms (next.js: 5ms, application-code: 13ms)
- GET /api/admin/bikes 200 in 7ms (next.js: 1719µs, application-code: 6ms)
- GET /admin/quiz 200 in 52ms (next.js: 17ms, application-code: 36ms)
- GET /api/admin/bikes 200 in 31ms (next.js: 19ms, application-code: 12ms)
- GET /api/admin/auth/me 200 in 6ms (next.js: 1610µs, application-code: 4ms)
- GET /api/admin/quiz/questions 200 in 18ms (next.js: 9ms, application-code: 9ms)
- GET /api/admin/bikes 200 in 8ms (next.js: 1521µs, application-code: 6ms)
- GET /api/admin/quiz/questions 200 in 5ms (next.js: 606µs, application-code: 5ms)
- GET /admin 200 in 26ms (next.js: 6ms, application-code: 20ms)
- GET /api/admin/auth/me 200 in 21ms (next.js: 19ms, application-code: 2ms)
- GET /api/admin/users?limit=1 200 in 39ms (next.js: 19ms, application-code: 20ms)
- GET /api/admin/quiz/questions 200 in 28ms (next.js: 19ms, application-code: 9ms)
- GET /api/admin/bikes 200 in 30ms (next.js: 13ms, application-code: 17ms)
- GET /api/admin/generations?limit=1 200 in 33ms (next.js: 12ms, application-code: 21ms)
- GET /api/admin/bikes 200 in 14ms (next.js: 10ms, application-code: 5ms)
- GET /api/admin/quiz/questions 200 in 25ms (next.js: 8ms, application-code: 17ms)
- GET /api/admin/users?limit=1 200 in 28ms (next.js: 1477µs, application-code: 27ms)
- GET /api/admin/generations?limit=1 200 in 19ms (next.js: 10ms, application-code: 9ms)
+ POST /api/generate 200 in 18.9s (next.js: 1709µs, application-code: 18.9s)
+ GET /result/82d28bd49ad84785bd5daec8faae3e25 200 in 63ms (next.js: 21ms, application-code: 42ms)
+✓ Compiled in 346ms

@@ -29,6 +29,8 @@ export async function GET(req: Request) {
           u.id as user_id,
           u.name as user_name,
           u.phone as user_phone,
+          u.gender,
+          u.division,
           b.model_name as bike_model
         FROM generations g
         JOIN users u ON g.user_id = u.id

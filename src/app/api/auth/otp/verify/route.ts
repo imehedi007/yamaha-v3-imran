@@ -8,6 +8,8 @@ const verifyOtpSchema = z.object({
   name: z.string().min(1).optional(),
   phone: z.string().min(10).max(15),
   dob: z.string().optional(),
+  gender: z.enum(['Male', 'Female']),
+  division: z.enum(['Dhaka', 'Chattogram', 'Rajshahi', 'Khulna', 'Barishal', 'Sylhet', 'Rangpur', 'Mymensingh']),
   otp: z.string().length(4)
 });
 
@@ -20,7 +22,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Invalid input' }, { status: 400 });
     }
 
-    const { name, phone, dob, otp } = result.data;
+    const { name, phone, dob, gender, division, otp } = result.data;
 
     // Verify OTP from DB
     const otps = await query<any[]>(
@@ -46,14 +48,14 @@ export async function POST(req: Request) {
         return NextResponse.json({ error: 'Name is required for new users' }, { status: 400 });
       }
       const insertResult = await query<any>(
-        `INSERT INTO users (name, phone, dob) VALUES (?, ?, ?)`,
-        [name, phone, dob]
+        `INSERT INTO users (name, phone, dob, gender, division) VALUES (?, ?, ?, ?, ?)`,
+        [name, phone, dob, gender, division]
       );
       userId = insertResult.insertId;
     } else {
       userId = users[0].id;
       // Optionally update name/dob if provided
-      if (name || dob) {
+      if (name || dob || gender || division) {
         let updateSql = 'UPDATE users SET ';
         const params: any[] = [];
         if (name) {
@@ -63,6 +65,14 @@ export async function POST(req: Request) {
         if (dob) {
           updateSql += 'dob = ?, ';
           params.push(dob);
+        }
+        if (gender) {
+          updateSql += 'gender = ?, ';
+          params.push(gender);
+        }
+        if (division) {
+          updateSql += 'division = ?, ';
+          params.push(division);
         }
         updateSql = updateSql.slice(0, -2) + ' WHERE id = ?';
         params.push(userId);

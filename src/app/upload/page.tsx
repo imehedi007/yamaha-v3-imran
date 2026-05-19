@@ -7,7 +7,7 @@ import styles from './upload.module.css';
 const LOADING_MESSAGES = [
   "Analyzing facial features...",
   "Mapping your ride personality...",
-  "Matching with Yamaha R15M...",
+  "Matching with your Yamaha model...",
   "Crafting cinematic landscape...",
   "Blending persona with environment...",
   "Finalizing your cinematic portrait..."
@@ -234,7 +234,7 @@ export default function Upload() {
 
   useEffect(() => {
     let interval: NodeJS.Timeout;
-    
+
     const handleBeforeUnload = (e: BeforeUnloadEvent) => {
       if (loading) {
         e.preventDefault();
@@ -259,7 +259,7 @@ export default function Upload() {
         window.removeEventListener('popstate', handlePopState);
       };
     }
-    
+
     return undefined;
   }, [loading]);
 
@@ -566,8 +566,8 @@ export default function Upload() {
 
         {error && <div style={{ color: '#ff4d4d', marginBottom: '16px', fontSize: '13px', background: 'rgba(255,77,77,0.1)', padding: '8px', borderRadius: '4px' }}>{error}</div>}
 
-        <div 
-          className={styles.uploadBox} 
+        <div
+          className={styles.uploadBox}
           onClick={() => fileInputRef.current?.click()}
           style={{ borderColor: preview ? 'transparent' : 'rgba(255,255,255,0.2)' }}
         >
@@ -587,16 +587,16 @@ export default function Upload() {
           )}
         </div>
 
-        <input 
-          type="file" 
-          ref={fileInputRef} 
-          onChange={handleFileChange} 
-          accept="image/*" 
-          style={{ display: 'none' }} 
+        <input
+          type="file"
+          ref={fileInputRef}
+          onChange={handleFileChange}
+          accept="image/*"
+          style={{ display: 'none' }}
         />
 
-        <button 
-          className="primary-button" 
+        <button
+          className="primary-button"
           disabled={!file}
           onClick={handleGenerate}
           style={{ marginTop: '16px' }}
